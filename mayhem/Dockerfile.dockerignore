@@ -1,0 +1,10 @@
+# Prune only untracked build output and editor state. .git stays (the image needs the full history),
+# and so does every tracked file: dropping one would show up as a deletion in `git diff` inside /mayhem.
+build/
+**/build/
+**/*.o
+**/*.a
+**/*.elf
+**/*.uf2
+.idea/
+.vscode/

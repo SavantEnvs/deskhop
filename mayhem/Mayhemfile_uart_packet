@@ -1,0 +1,9 @@
+project: savantenvs/deskhop
+target: uart_packet
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uart_packet/testsuite
+cmds:
+  - cmd: /mayhem/uart_packet
+    libfuzzer: true
+    timeout: 5

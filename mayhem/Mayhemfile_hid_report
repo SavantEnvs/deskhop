@@ -1,0 +1,9 @@
+project: savantenvs/deskhop
+target: hid_report
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hid_report/testsuite
+cmds:
+  - cmd: /mayhem/hid_report
+    libfuzzer: true
+    timeout: 5
